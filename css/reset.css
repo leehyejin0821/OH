@@ -29,6 +29,9 @@ body {
   font-family: "ppneuemontreal", sans-serif;
   font-size: 100%;
   overflow-x: hidden;
+
+  position: relative;
+  background-color: #fff;
 }
 
 ol,
