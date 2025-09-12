@@ -16,7 +16,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
   const loginBtn = document.querySelector(`.login_btn`);
   const loginBox = document.querySelector(`.login_box`);
   const exitBtn = document.querySelector(`.exit_btn`);
-  const blackBg = document.querySelector(`black_bg`);
+  const blackBg = document.querySelector(`.black_bg`);
 
   loginBtn.addEventListener(`click`, function () {
     loginBox.classList.add(`open`);
@@ -83,25 +83,36 @@ document.addEventListener(`DOMContentLoaded`, function () {
 
   // 인포버튼 호버이벤트
   const circle = document.querySelector(`.infor svg`);
-  const moreCircle = document.querySelector(`.wrap .more_btn svg`);
-
   const view = document.querySelector(`.view`);
-  const moreBtn = document.querySelector(`.wrap .more_btn`);
-  const bannerBg = document.querySelector(`.banner .container`);
 
   view.addEventListener(`mouseenter`, function () {
     circle.classList.add(`hover`);
-    bannerBg.classList.add(`hover`);
   });
   view.addEventListener(`mouseleave`, function () {
     circle.classList.remove(`hover`);
-    bannerBg.classList.remove(`hover`);
   });
 
-  moreBtn.addEventListener(`mouseenter`, function () {
-    moreCircle.classList.add(`hover`);
+  // 배너 배경 전환
+  const viewBtn = document.querySelector(`.infor_box .view`);
+  const photo = document.querySelector(`.banner .container`);
+
+  viewBtn.addEventListener(`mouseenter`, function () {
+    const changeImage = viewBtn.getAttribute(`data-image`);
+    photo.style.backgroundImage = `url(${changeImage})`;
   });
-  moreBtn.addEventListener(`mouseleave`, function () {
-    moreCircle.classList.remove(`hover`);
+  viewBtn.addEventListener(`mouseleave`, function () {
+    photo.style.backgroundImage = ``;
+  });
+
+  // 배너 배경밝기 스크롤이벤트
+  window.addEventListener(`scroll`, () => {
+    const scrollTop = window.scrollY;
+    console.log(scrollTop);
+
+    if (scrollTop >= 400) {
+      photo.classList.add(`bright`);
+    } else {
+      photo.classList.remove(`bright`);
+    }
   });
 }); // end
