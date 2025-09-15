@@ -677,7 +677,7 @@
 }
 
 .sec_2 .top_box .title {
-  font-size: 9em;
+  font-size: 9rem;
   font-weight: 500;
   letter-spacing: -5px;
   line-height: 140px;
@@ -692,79 +692,49 @@
 }
 
 .sec_2 .center_box {
-  /* display: flex;
-  flex-direction: column;
-  gap: 140px; */
-  display: grid;
-  grid-template-columns: repeat(2, 3fr);
-}
-
-.sec_2 .center_box .photo_box {
-  margin-bottom: 140px;
-}
-.sec_2 .center_box .photo_box5,
-.sec_2 .center_box .photo_box6 {
-  margin-bottom: 0;
-}
-.sec_2 .center_box .photo_box1,
-.sec_2 .center_box .photo_box3,
-.sec_2 .center_box .photo_box5 {
-  margin-right: 16px;
-}
-.sec_2 .center_box .photo_box6 {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
   flex-direction: column;
+  gap: 140px;
 }
 
-/* .sec_2 .center_box .grid {
+.sec_2 .center_box .grid {
   display: flex;
   justify-content: space-between;
-} */
+
+  gap: 16px;
+}
+.sec_2 .center_box .photo_box {
+  width: 50%;
+}
+.sec_2 .center_box .photo_box3,
+.sec_2 .center_box .photo_box6 {
+  width: calc(50% - 156px);
+}
 
 .sec_2 .center_box .photo_box .photo1 {
   /* width: 912px; */
-  width: 100%;
-  /* height: 1240px; */
-  grid-column: 1;
-  grid-row: 1;
+  height: 1240px;
 }
 
 .sec_2 .center_box .photo_box .photo2 {
   /* width: 912px; */
-  width: 100%;
-  /* height: 627px; */
-  grid-column: 1;
-  grid-row: 2;
+  height: 627px;
 }
 .sec_2 .center_box .photo_box .photo3 {
   /* width: 758px; */
-  width: 83%;
-  /* height: 1029px; */
-  grid-column: 2;
-  grid-row: 1;
+  height: 1029px;
 }
 .sec_2 .center_box .photo_box .photo4 {
   /* width: 913px; */
-  width: 100%;
-  /* height: 627px; */
-  grid-column: 2;
-  grid-row: 2;
+  height: 627px;
 }
 .sec_2 .center_box .photo_box .photo5 {
   /* width: 912px; */
-  width: 100%;
-  /* height: 1240px; */
-  grid-column: 3;
-  grid-row: 1;
+  height: 1240px;
 }
 .sec_2 .center_box .photo_box .photo6 {
   /* width: 758px; */
-  width: 83%;
-  /* height: 521px; */
-  grid-column: 3;
-  grid-row: 2;
+  height: 521px;
 }
 
 .sec_2 .center_box .photo_text_box {
@@ -867,14 +837,9 @@
 
 /* ///////////////////////////////////////////// */
 /* sec_4영역 */
-.sec_4 {
-  width: 100%;
-  height: 100%;
-}
 
 .sec_4 .container {
   width: 100%;
-  height: 100%;
   padding-bottom: 32px;
   color: #080808;
 }
@@ -884,28 +849,25 @@
 }
 
 .sec_4 .content_box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  gap: 328px;
 }
 
 .sec_4 .content_box .left_box {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 90%;
+  width: 50%;
 }
 
 .sec_4 .content_box .right_box {
-  /* width: 90%; */
-  display: flex;
-  justify-content: flex-end;
-  /* align-items: flex-end; */
+  width: 50%;
 }
 
-/* .sec_4 .content_box .left_box .photo_box {
-  width: 758px;
+.sec_4 .content_box .left_box .photo_box {
+  /* width: 758px; */
   height: 505px;
-} */
+}
 
 .sec_4 .content_box .left_box .content_main {
   font-size: 1.35rem;
@@ -923,9 +885,7 @@
 
 .sec_4 .right_box .photo_box .photo {
   /* width: 758px; */
-  /* height: 1010px; */
-  width: 100%;
-  height: 80%;
+  height: 1010px;
   position: relative;
   overflow: hidden;
 }
@@ -945,7 +905,6 @@
 }
 .sec_4 .right_box .photo_text_box .text_box {
   display: flex;
-  /* align-items: center; */
   gap: 32px;
 }
 .sec_4 .right_box .photo_text_box .text3 {
@@ -956,7 +915,7 @@
 }
 
 .sec_4 .bottom_box .title_box {
-  /* margin-top: 190px; */
+  margin-top: 190px;
 
   margin-bottom: 40px;
 }
@@ -1042,22 +1001,18 @@
 
 .footer .main_box {
   /* gap: 168px; */
-  /* display: flex;
-  justify-content: space-between; */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.footer .main_box .photo_box {
-  width: 70%;
-  height: 100%;
+  display: flex;
 }
 .footer .main_box .photo_box .photo1 {
-  height: 60%;
+  height: 554px;
 }
 .footer .main_box .photo_box .photo2 {
+  height: 234px;
   margin-top: 20px;
 }
-
+.footer .main_box .left_box {
+  margin-left: 172px;
+}
 .footer .main_box .left_box .navi {
   font-size: 3.25rem;
   font-weight: 800;
@@ -1066,6 +1021,10 @@
   display: flex;
   flex-direction: column;
   margin-top: 16px;
+}
+
+.footer .main_box .right_box {
+  margin-left: 342px;
 }
 .footer .main_box .right_box .detail {
   margin-bottom: 16px;
@@ -1107,7 +1066,7 @@
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 32px;
-  /* margin-top: 132px; */
+  margin-top: 132px;
 }
 
 .footer .infor_box .text4 .border {
