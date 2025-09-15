@@ -28,6 +28,15 @@ document.addEventListener(`DOMContentLoaded`, function () {
     blackBg.classList.remove(`open`);
   });
 
+  blackBg.addEventListener(`click`, function (event) {
+    console.log(event.target);
+
+    //자금 클릭한 요소와 이벤트리스너가 달린곳과 같다면 클래스 제거해줘
+    if (event.target == event.currentTarget) {
+      this.classList.remove(`open`);
+    }
+  });
+
   // 헤더 스크롤이벤트
   const header = document.querySelector(`.header_wrap`);
   const headerBox = document.querySelector(`.header_wrap .container`);
@@ -94,25 +103,35 @@ document.addEventListener(`DOMContentLoaded`, function () {
 
   // 배너 배경 전환
   const viewBtn = document.querySelector(`.infor_box .view`);
-  const photo = document.querySelector(`.banner .container`);
+  const banner = document.querySelector(`.banner .container`);
 
   viewBtn.addEventListener(`mouseenter`, function () {
     const changeImage = viewBtn.getAttribute(`data-image`);
-    photo.style.backgroundImage = `url(${changeImage})`;
+    banner.style.backgroundImage = `url(${changeImage})`;
   });
   viewBtn.addEventListener(`mouseleave`, function () {
-    photo.style.backgroundImage = ``;
+    banner.style.backgroundImage = ``;
   });
 
   // 배너 배경밝기 스크롤이벤트
   window.addEventListener(`scroll`, () => {
-    const scrollTop = window.scrollY;
-    console.log(scrollTop);
+    // const scrollTop = window.scrollY;
+    // console.log(scrollTop);
 
-    if (scrollTop >= 400) {
-      photo.classList.add(`bright`);
-    } else {
-      photo.classList.remove(`bright`);
-    }
+    // if (scrollTop >= 400) {
+    //   photo.classList.add(`bright`);
+    // } else {
+    //   photo.classList.remove(`bright`);
+    // }
+
+    const height = window.pageYOffset || window.scrollY;
+    console.log(height);
+
+    // 65= a * 400 + b
+    // 15= a * 1300 + b
+    // a = -1/18,b = 785/9
+
+    const y = (-1 / 18) * height + 785 / 9;
+    banner.style.filter = `brightness(${y}%)`;
   });
 }); // end
