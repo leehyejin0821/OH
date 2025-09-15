@@ -80,14 +80,14 @@ document.addEventListener(`DOMContentLoaded`, function () {
     mainPhoto.classList.add(`hover`);
     subPhoto.classList.add(`hover`);
     photoSize.style.width = `${60}%`;
-    photoSize.style.height = `${70}%`;
+    photoSize.style.height = `${60}%`;
   });
 
   photoBox.addEventListener(`mouseleave`, function () {
     mainPhoto.classList.remove(`hover`);
     subPhoto.classList.remove(`hover`);
     photoSize.style.width = `${30}%`;
-    photoSize.style.height = `${35}%`;
+    photoSize.style.height = `${30}%`;
   });
 
   // 인포버튼 호버이벤트
