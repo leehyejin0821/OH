@@ -53,20 +53,24 @@ document.addEventListener(`DOMContentLoaded`, function () {
       header.classList.remove(`scroll`);
     }
 
-    if (scrollTop >= 400) {
-      header.classList.add(`rescroll`);
+    if (scrollTop >= 200) {
       headerBox.classList.add(`rescroll`);
       logoBox.classList.add(`rescroll`);
       mainMenuBox.classList.add(`rescroll`);
       loginBtn.classList.add(`rescroll`);
       subMenuBtn.classList.add(`rescroll`);
     } else {
-      header.classList.remove(`rescroll`);
       headerBox.classList.remove(`rescroll`);
       logoBox.classList.remove(`rescroll`);
       mainMenuBox.classList.remove(`rescroll`);
       loginBtn.classList.remove(`rescroll`);
       subMenuBtn.classList.remove(`rescroll`);
+    }
+
+    if (scrollTop >= 400) {
+      header.classList.add(`rescroll`);
+    } else {
+      header.classList.remove(`rescroll`);
     }
   });
 
@@ -115,15 +119,6 @@ document.addEventListener(`DOMContentLoaded`, function () {
 
   // 배너 배경밝기 스크롤이벤트
   window.addEventListener(`scroll`, () => {
-    // const scrollTop = window.scrollY;
-    // console.log(scrollTop);
-
-    // if (scrollTop >= 400) {
-    //   photo.classList.add(`bright`);
-    // } else {
-    //   photo.classList.remove(`bright`);
-    // }
-
     const height = window.pageYOffset || window.scrollY;
     console.log(height);
 

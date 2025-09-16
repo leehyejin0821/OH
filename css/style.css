@@ -19,7 +19,6 @@
   align-items: center;
   gap: 16px;
   cursor: pointer;
-  /* padding: 16px 20px; */
 }
 
 .wrap .more_btn svg {
@@ -44,7 +43,6 @@
 /* 헤더영역 */
 .header_wrap {
   width: 100%;
-  /* height: 100%; */
   position: fixed;
   left: 0;
   top: 0;
@@ -1015,7 +1013,9 @@
   flex-direction: column;
   margin-top: 16px;
 }
-
+.footer .main_box .left_box .navi .menu {
+  cursor: pointer;
+}
 .footer .main_box .right_box {
   margin-left: 342px;
 }
@@ -1061,7 +1061,10 @@
   margin-top: 32px;
   margin-top: 132px;
 }
-
+.footer .infor_box .text_box2,
+.footer .infor_box .text_box3 {
+  cursor: pointer;
+}
 .footer .infor_box .text4 .border {
   border-bottom: 1.5px solid #080808;
   margin: 0 2px;
@@ -1410,6 +1413,9 @@
   }
   .footer .main_box .photo_box .photo1 {
     height: 1000px;
+  }
+  .footer .main_box .photo_box .photo2 img {
+    object-fit: contain;
   }
   .footer .main_box .photo_box .photo2 {
     /* width: 98.75vw; */
