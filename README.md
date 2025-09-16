@@ -31,7 +31,7 @@
 ---
 
 ## 🚀 Demo / Live Site
-👉 [Live Demo](https://leehyejin0821.github.io/muji/)
+👉 [Live Demo](https://leehyejin0821.github.io/OH/)
 
 ---
 
