@@ -31,7 +31,7 @@
 ---
 
 ## 🚀 Demo / Live Site
-👉 [Live Demo](https://leehyejin0821.github.io/OH/)
+👉 [OH ARCHITECTURE 클론 홈페이지 바로가기](https://leehyejin0821.github.io/OH/)
 
 ---
 
